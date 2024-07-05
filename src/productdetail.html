@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krist - Women's Collection</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <main class="container mx-auto p-4 md:py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Product Images -->
+            <div>
+                <img id="mainImage" src="/assets/images/aomau2.png" alt="Main Product Image" class="w-full h-[500px] object-cover rounded-lg">
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-4">
+                    <img onclick="switchImage('/assets/images/aomau.png')" src="/assets/images/aomau.png" alt="Product Image 1" class="w-full rounded-lg cursor-pointer">
+                    <img onclick="switchImage('/assets/images/aomau2.png')" src="/assets/images/aomau2.png" alt="Product Image 2" class="w-full rounded-lg cursor-pointer">
+                    <img onclick="switchImage('/assets/images/aomau2.png')" src="/assets/images/aomau2.png" alt="Product Image 3" class="w-full rounded-lg cursor-pointer">
+                    <img onclick="switchImage('/assets/images/aomau.png')" src="/assets/images/aomau.png" alt="Product Image 4" class="w-full rounded-lg cursor-pointer">
+                </div>
+            </div>
+            
+            <!-- Product Details -->
+            <div>
+                <h1 class="text-3xl font-bold">YK Disney</h1>
+                <p class="text-lg text-gray-600">Girls Pink Moana Printed Dress</p>
+                <div class="flex items-center mt-2">
+                    <div class="flex space-x-1 text-yellow-500">
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                    </div>
+                    <span class="ml-2 text-gray-600">(121 Reviews)</span>
+                </div>
+                <div class="mt-4">
+                    <span class="text-2xl font-semibold">$80.00</span>
+                    <span class="text-gray-500 line-through ml-2">$100.00</span>
+                </div>
+                <p class="mt-4 text-gray-700">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
+                <div class="mt-4">
+                    <span class="font-semibold">Color</span>
+                    <div class="flex space-x-2 mt-2">
+                        <button class="w-6 h-6 bg-red-500 rounded-full border"></button>
+                        <button class="w-6 h-6 bg-purple-500 rounded-full border"></button>
+                        <button class="w-6 h-6 bg-yellow-500 rounded-full border"></button>
+                        <button class="w-6 h-6 bg-gray-500 rounded-full border"></button>
+                        <button class="w-6 h-6 bg-lime-500 rounded-full border"></button>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <span class="font-semibold">Size</span>
+                    <div class="flex space-x-2 mt-2">
+                        <button class="border py-1 px-3 rounded">S</button>
+                        <button class="border py-1 px-3 rounded">M</button>
+                        <button class="border py-1 px-3 rounded">L</button>
+                        <button class="border py-1 px-3 rounded">XL</button>
+                        <button class="border py-1 px-3 rounded">XXL</button>
+                    </div>
+                </div>
+                <div class="mt-4 flex items-center">
+                    <div class="flex items-center space-x-2 border text-gray-700 border-gray-300 rounded mr-3">
+                        <button class="px-2 py-1 text-xl font-semibold text-gray-700" id="decrement">-</button>
+                        <span class="px-4 py-1 text-lg font-medium text-gray-700" id="quantity">1</span>
+                        <button class="px-2 py-1 text-xl font-semibold text-gray-700" id="increment">+</button>
+                    </div>
+                    <button class="bg-black text-white py-2 px-6 rounded">Add to Cart</button>
+                    <button class="ml-4 border py-2 px-6 rounded">&#x2661;</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Sections -->
+        <div class="mt-8">
+            <ul class="flex space-x-8 border-b pb-2">
+                <li class="font-semibold cursor-pointer" onclick="showSection('description')">Description</li>
+                <li class="cursor-pointer" onclick="showSection('additional-info')">Additional Information</li>
+                <li class="cursor-pointer" onclick="showSection('reviews')">Reviews</li>
+            </ul>
+            <div id="description" class="mt-4 text-gray-700">
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                <p class="mt-2">Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+            </div>
+            <div id="additional-info" class="mt-4 text-gray-700 hidden">
+                <p>This section contains additional information about the product.</p>
+            </div>
+            <div id="reviews" class="mt-4 text-gray-700 hidden">
+                <p>Customer reviews will be displayed here.</p>
+            </div>
+        </div>
+
+        <!-- Related Products Section -->
+        <div class="mt-8">
+            <h2 class="text-2xl font-bold">Related Products</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-4">
+                <!-- Related Product Card -->
+                <div class="border p-4 rounded-lg">
+                    <img src="/assets/images/aomau2.png" alt="Related Product 1" class="w-full rounded-lg">
+                    <h3 class="mt-2 font-semibold">US Polo Tailored Cotton Casual Shirt</h3>
+                    <div class="mt-2">
+                        <span class="text-lg font-semibold">$40.00</span>
+                        <span class="text-gray-500 line-through ml-2">$50.00</span>
+                    </div>
+                </div>
+                <!-- More Related Products -->
+                <div class="border p-4 rounded-lg">
+                    <img src="/assets/images/aomau2.png" alt="Related Product 2" class="w-full rounded-lg">
+                    <h3 class="mt-2 font-semibold">Roadstar Printed Blazer for Men</h3>
+                    <div class="mt-2">
+                        <span class="text-lg font-semibold">$60.00</span>
+                        <span class="text-gray-500 line-through ml-2">$70.00</span>
+                    </div>
+                </div>
+                <div class="border p-4 rounded-lg">
+                    <img src="/assets/images/aomau2.png" alt="Related Product 3" class="w-full rounded-lg">
+                    <h3 class="mt-2 font-semibold">YK Disney Red Printed TShirt</h3>
+                    <div class="mt-2">
+                        <span class="text-lg font-semibold">$30.00</span>
+                        <span class="text-gray-500 line-through ml-2">$35.00</span>
+                    </div>
+                </div>
+                <div class="border p-4 rounded-lg">
+                    <img src="/assets/images/aomau2.png" alt="Related Product 4" class="w-full rounded-lg">
+                    <h3 class="mt-2 font-semibold">Flora Leather Hand Purse</h3>
+                    <div class="mt-2">
+                        <span class="text-lg font-semibold">$35.00</span>
+                        <span class="text-gray-500 line-through ml-2">$45.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="bg-white"><div class="container mx-auto py-12">
+      
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12 text-center">
+            <div>
+                <img src="/assets/images/truck-fast-solid.svg" alt="Free Shipping" class="h-7 w-h-7 mx-auto mb-2">
+                <h3 class="font-bold">Free Shipping</h3>
+                <p>Free shipping for order above $150</p>
+            </div>
+            <div>
+                <img src="/assets/images/coins-solid.svg" alt="Money Guarantee" class="h-7 w-h-7 mx-auto mb-2">
+                <h3 class="font-bold">Money Guarantee</h3>
+                <p>Within 30 days for an exchange</p>
+            </div>
+            <div>
+                <img src="/assets/images/phone-solid.svg" alt="Online Support" class="h-7 w-h-7 mx-auto mb-2">
+                <h3 class="font-bold">Online Support</h3>
+                <p>24 hours a day, 7 days a week</p>
+            </div>
+            <div>
+                <img src="/assets/images/credit-card-regular.svg" alt="Flexible Payment" class="h-7 w-h-7 mx-auto mb-2">
+                <h3 class="font-bold">Flexible Payment</h3>
+                <p>Pay with multiple credit cards</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchImage(src) {
+            document.getElementById('mainImage').src = src;
+        }
+
+        function showSection(section) {
+            document.getElementById('description').classList.add('hidden');
+            document.getElementById('additional-info').classList.add('hidden');
+            document.getElementById('reviews').classList.add('hidden');
+            document.getElementById(section).classList.remove('hidden');
+        }
+
+        // JavaScript to handle quantity increment and decrement
+        document.addEventListener('DOMContentLoaded', () => {
+            const quantityElement = document.getElementById('quantity');
+            let quantity = parseInt(quantityElement.textContent);
+
+            document.getElementById('increment').addEventListener('click', () => {
+                quantity += 1;
+                quantityElement.textContent = quantity;
+            });
+
+            document.getElementById('decrement').addEventListener('click', () => {
+                if (quantity > 1) {
+                    quantity -= 1;
+                    quantityElement.textContent = quantity;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

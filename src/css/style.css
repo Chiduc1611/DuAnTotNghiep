@@ -1,0 +1,59 @@
+.category-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.category-title {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.category-card:hover .category-title {
+    transform: translate(-50%, -30%);
+}
+
+.category-card img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.category-card:hover img {
+    transform: scale(1.01);
+}
+
+.category-card .icons,
+.category-card .add-to-cart {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.category-card:hover .icons,
+.category-card:hover .add-to-cart {
+    opacity: 1;
+}
+
+.icons {
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-to-cart {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.group:hover .overlay {
+    opacity: 1;
+}
+.overlay {
+    transition: opacity 0.3s ease-in-out;
+}
